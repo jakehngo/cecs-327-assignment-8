@@ -1,4 +1,5 @@
 import socket
+import certifi
 from pymongo import MongoClient
 
 # const value for the size of the buffer for the program
@@ -7,7 +8,7 @@ BUFFERSIZE = 1024
 # Retrieve the database, and return the collection where our data is stored
 def get_database():
    connection_string = "mongodb+srv://dngojngo:passwordjake@cluster0.crczq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-   client = MongoClient(connection_string)
+   client = MongoClient(connection_string, tlsCAFile = certifi.where())
 
    return client["test"]["my database_virtual"]
 

@@ -1,10 +1,14 @@
 # cecs-327-assignment-8
  
-## Instructions on running client, server, and databaseO:
+## Instructions on running client, server, and database:
 1. For the server, make sure that you have the following libraries installed on your machine:
     - PyMongo (Needed for database access)
     - pytz (Needed for Timestamp conversions)
-    - If you don't have these libraries install, simply run the command "python -m pip install pymongo" and "python -m pip install rytz"
+	- certifi (Need for database certificate verification)
+    - If you don't have these libraries install, simply run the commands
+		- "pip install pymongo" 
+		- "pip install pytz"
+		- "pip install certifi"
 
 2. Run the server by navigating to the folder where server.py is in command prompt and running "py server.py"
     - Specify the port you'd want to communicate over, 22 is easiest as it is already open
